@@ -1,5 +1,9 @@
 require 'oystercard'
 
 describe Oystercard  do
-  it { is_expected.to respond_to :balance }
+  subject(:oystercard) { described_class.new }
+
+    it "expects a balance of zero" do
+      expect(oystercard.balance).to eq 0
+  end
 end
